@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="resources/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>YouTube</title>
+  </head>
+  <body>
+    <nav>
+        <div class="logo">
+          <img src="resources/menu.svg" class="menu-icon" />
+          <img src="resources/logo.svg" alt="YouTube logo" />
+          <span class="country-code">ZA</span>
+        </div>
+
+        <div class="searchbar">
+          <form>
+            <input type="text" placeholder="Search" />
+            <button title="Search">
+              <img src="resources/search.svg" alt="" />
+            </button>
+          </form>
+
+          <div class="search-mic" title="Search with your voice">
+            <i class="material-icons">mic_none</i>
+          </div>
+        </div>
+
+        <div class="nav-end">
+          <details class="nav-dropdown create-dropdown">
+            <summary class="create-btn">
+              <img src="resources/create.svg"/>
+              Create
+            </summary>
+            <div class="dropdown-panel">
+              <span class="category"><img src="resources/your-vids.svg">Upload video</span>
+              <span class="category"><img src="resources/go-live.svg">Go live</span>
+              <span class="category"><img src="resources/new-post.svg">Create post</span>
+            </div>
+          </details>
+
+          <button class="notif-btn">
+            <img src="resources/notifications.svg" alt="" />
+          </button>
+          <details class="nav-dropdown profile-dropdown">
+            <summary class="icon-btn profile-summary">
+              <img src="resources/profile.jpg" class="profile"/>
+            </summary>
+            <div class="dropdown-panel">
+              <span class="category"><img src="resources/sign-out.svg"><a href="login.html">Sign out</a></span>
+              <span class="category"><img src="resources/switch-account.svg">Switch account</span>
+              <span class="category"><img src="resources/settings.svg">Settings</span>
+            </div>
+          </details>
+        </div>
+      </nav>
+
+      <main>
+      <!-- side bar, recommendations carousel and videos
+      
+        <!-- Left Side of main -->
+      <div class="sidebar">
+        <div class="categories-section">
+          <span class="category active">
+            <img src="resources/home.svg" class="category-icon" />
+            Home
+          </span>
+          <span class="category">
+            <img src="resources/shorts.svg" class="category-icon" />
+            Shorts
+          </span>
+        </div>
+
+        <div class="categories-section">
+          <span class="category">
+            <h3>
+              <a
+                href="https://www.youtube.com/feed/subscriptions"
+                class="category-heading"
+                target="_blank"
+                >Subscriptions</a
+              >
+            </h3>
+            <img src="resources/right-arrow.svg" />
+          </span>
+          <span class="category">
+            <img src="resources/crc.jpg" class="channel-icon" />
+            CRC Church
+          </span>
+          <span class="category">
+            <img src="resources/hgtv.jpg" class="channel-icon" />
+            HGTV
+          </span>
+          <span class="category">
+            <img src="resources/mancity.jpg" class="channel-icon" />
+            Man City
+          </span>
+          <span class="category">
+            <img src="resources/millenial-mom.jpg" class="channel-icon" />
+            The Millenial Mom
+          </span>
+          <span class="category">
+            <img src="resources/zaio.jpg" class="channel-icon" />
+            Zaio
+          </span>
+          <span class="category">
+            <img src="resources/arrow-down.svg" class="channel-icon" />
+            Show more
+          </span>
+        </div>
+
+        <div class="categories-section">
+          <span class="category">
+            <h3>
+              <a
+                href="https://www.youtube.com/feed/you"
+                class="category-heading"
+                target="_blank"
+                >You</a
+              >
+            </h3>
+            <img src="resources/right-arrow.svg" />
+          </span>
+          <span class="category">
+            <img src="resources/history.svg" class="category-icon" />
+            History
+          </span>
+          <span class="category">
+            <img src="resources/playlists.svg" class="category-icon" />
+            Playlists
+          </span>
+          <span class="category">
+            <img src="resources/watch-later.svg" class="category-icon" />
+            Watch Later
+          </span>
+          <span class="category">
+            <img src="resources/liked-vids.svg" class="category-icon" />
+            Liked Videos
+          </span>
+          <span class="category">
+            <img src="resources/your-vids.svg" class="category-icon" />
+            Your Videos
+          </span>
+          <span class="category">
+            <img src="resources/downloads.svg" class="category-icon" />
+            Downloads
+          </span>
+        </div>
+
+        <div class="categories-section">
+          <span class="category">
+            <h3>Explore</h3>
+          </span>
+          <span class="category">
+            <img src="resources/music.svg" class="category-icon" />
+            Music
+          </span>
+          <span class="category">
+            <img src="resources/gaming.svg" class="category-icon" />
+            Gaming
+          </span>
+          <span class="category">
+            <img src="resources/news.svg" class="category-icon" />
+            News
+          </span>
+          <span class="category">
+            <img src="resources/arrow-down.svg" class="category-icon" />
+            Show more
+          </span>
+        </div>
+
+        <div class="categories-section">
+          <span class="category">
+            <h3>More from YouTube</h3>
+          </span>
+          <span class="category">
+            <img src="resources/yt-premium.svg" class="category-icon" />
+            YouTube Premium
+          </span>
+          <span class="category">
+            <img src="resources/yt-studio.svg" class="category-icon" />
+            YouTube Studio
+          </span>
+          <span class="category">
+            <img src="resources/yt-music.svg" class="category-icon" />
+            YouTube Music
+          </span>
+          <span class="category">
+            <img src="resources/yt-kids.svg" class="category-icon" />
+            YouTube Kids
+          </span>
+        </div>
+
+        <div class="categories-section">
+          <span class="category">
+            <img src="resources/settings.svg" class="category-icon" />
+            Settings
+          </span>
+          <span class="category">
+            <img src="resources/report-history.svg" class="category-icon" />
+            Report History
+          </span>
+          <span class="category">
+            <img src="resources/help.svg" class="category-icon" />
+            Help
+          </span>
+          <span class="category">
+            <img src="resources/feedback.svg" class="category-icon" />
+            Send Feedback
+          </span>
+        </div>
+        <footer>
+          <div class="footer-section">
+            <span class="footer-links">About</span>
+            <span class="footer-links">Press</span>
+            <span class="footer-links">Copyright</span>
+            <span class="footer-links">Contact us</span>
+            <span class="footer-links">Creator</span>
+            <span class="footer-links">Advertise</span>
+            <span class="footer-links">Developers</span>
+          </div>
+          <div class="footer-section">
+            <span class="footer-links">Terms</span>
+            <span class="footer-links">Privacy</span>
+            <span class="footer-links">Policy & Safety</span>
+            <span class="footer-links">How YouTube works</span>
+            <span class="footer-links">Test new features</span>
+          </div>
+          <span class="copyright">© 2026 Nompilo YouTube Clone</span>
+        </footer>
+      </div>
+
+      <!-- Main section with recommendations carousel on top -->
+      <div class="main-section">
+        <section class="recommendations">
+          <div class="rec-container">
+            <button class="rec-btn active">All</button>
+            <button class="rec-btn">Music</button>
+            <button class="rec-btn">Gaming</button>
+            <button class="rec-btn">News</button>
+            <button class="rec-btn">Live</button>
+            <button class="rec-btn">Kitchens</button>
+            <button class="rec-btn">Fashion</button>
+            <button class="rec-btn">Tech</button>
+            <button class="rec-btn">Travel</button>
+            <button class="rec-btn">Sports</button>
+            <button class="rec-btn">Asmr</button>
+            <button class="rec-btn">Natural hair</button>
+            <button class="rec-btn">Learning</button>
+            <button class="rec-btn">Podcasts</button>
+            <button class="rec-btn">Haul videos</button>
+            <button class="rec-btn">Beauty salons</button>
+          </div>
+        </section>
+
+        <!-- Videos Section -->
+        <div class="video-grid">
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-1.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/mancity.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  CITY WIN AT ANFIELD!!! | Liverpool 1-2 Man City | MatchDay
+                  Live
+                </h3>
+                <div class="posted-by">
+                  <span>Man City</span>
+                  <div class="views-date">
+                    <span>123k views</span>
+                    <span>•</span>
+                    <span>18 hours ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-2.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/millenial-mom.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  VLOG | Solo Date | Lunch | Big Sis Yap | My Camera Is Back |
+                  Let's Cook
+                </h3>
+                <div class="posted-by">
+                  <span>The Millenial Mom</span>
+                  <div class="views-date">
+                    <span>34k views</span>
+                    <span>•</span>
+                    <span>3 weeks ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-3.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/hgtv.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  Cleaning up Old Cabins - From Rustic to Remarkable | Fixer to
+                  Fabulous | HGTV
+                </h3>
+                <div class="posted-by">
+                  <span>HGTV</span>
+                  <div class="views-date">
+                    <span>78k views</span>
+                    <span>•</span>
+                    <span>12 days ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-4.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/crc.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  Turn And Take The Journey | Ps At Boshoff | 8 February 2026 PM
+                </h3>
+                <div class="posted-by">
+                  <span>CRC Church</span>
+                  <div class="views-date">
+                    <span>8k views</span>
+                    <span>•</span>
+                    <span>20 hours ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-5.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/zaio.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  Breaking Into Cybersecurity: Your Path to a High-Demand Tech
+                  Career
+                </h3>
+                <div class="posted-by">
+                  <span>Zaio</span>
+                  <div class="views-date">
+                    <span>264 views</span>
+                    <span>•</span>
+                    <span>9 months ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-6.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/mancity.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  Why Kevin De Bruyne is the GREATEST Premier League player ever
+                </h3>
+                <div class="posted-by">
+                  <span>Man City</span>
+                  <div class="views-date">
+                    <span>414k views</span>
+                    <span>•</span>
+                    <span>4 months ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-7.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/hgtv.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  Costa Rica Home Searches From Beach To Jungle – House Hunters
+                  Full Episode Marathon | HGTV
+                </h3>
+                <div class="posted-by">
+                  <span>HGTV</span>
+                  <div class="views-date">
+                    <span>25k views</span>
+                    <span>•</span>
+                    <span>19 days ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-8.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/millenial-mom.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  VLOG | Durban Visit | Am I Spoilt?| SHEIN Haul | Kids Party |
+                  Lunch | Christmas Prep | Lots of Food
+                </h3>
+                <div class="posted-by">
+                  <span>The Millenial Mom</span>
+                  <div class="views-date">
+                    <span>22k views</span>
+                    <span>•</span>
+                    <span>2 months ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-9.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/crc.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  When The Going Gets Tough ! | Pastor At Boshoff | 8 February
+                  2026 AM
+                </h3>
+                <div class="posted-by">
+                  <span>CRC Church</span>
+                  <div class="views-date">
+                    <span>11k views</span>
+                    <span>•</span>
+                    <span>2 days ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-10.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/zaio.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>
+                  Youth Day Edition: Build Your First Website Without Code
+                </h3>
+                <div class="posted-by">
+                  <span>Zaio</span>
+                  <div class="views-date">
+                    <span>209 views</span>
+                    <span>•</span>
+                    <span>7 months ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-11.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/crc.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>Fan The Flame | Pastor At Boshoff | 25 January 2026 PM</h3>
+                <div class="posted-by">
+                  <span>CRC Church</span>
+                  <div class="views-date">
+                    <span>10k views</span>
+                    <span>•</span>
+                    <span>2 weeks ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <div class="thumbnail">
+              <img
+                src="resources/thumbnail-12.jpg"
+                class="thumbnail-img"
+                alt=""
+              />
+              <div class="thumbnail-actions">
+                <button class="thumb-action">
+                  <i class="material-icons" title="Watch later">schedule</i>
+                </button>
+                <button class="thumb-action">
+                  <i class="material-icons" title="Add to playlist">playlist_play</i>
+                </button>
+              </div>
+            </div>
+            <div class="details">
+              <div class="profile">
+                <img src="resources/zaio.jpg" class="thumbnail-icon" />
+              </div>
+              <div class="video-details">
+                <h3>Zaio Online Open Day</h3>
+                <div class="posted-by">
+                  <span>Zaio</span>
+                  <div class="views-date">
+                    <span>325 views</span>
+                    <span>•</span>
+                    <span>8 months ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
